@@ -13,7 +13,7 @@ model = load_model("TextGenerationModel.keras")
 with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
-max_sequence_length = 6  # ⚠️ CHANGE this to your actual value
+max_sequence_length = 6  
 
 def generate_text(seed_text, next_words=10):
     output_text = seed_text
@@ -43,7 +43,7 @@ def generate_text(seed_text, next_words=10):
 
 
 # UI
-st.title("✨ Text Generator")
+st.title("Text Generator")
 
 seed = st.text_input("Enter seed text")
 
